@@ -74,12 +74,16 @@ header .navigation-items ul li:hover {
     margin: 50px;
 }
 
-.services, .about, .testimonials {
+.services, .about, .testimonials, .contact {
     margin: 0 150px 0 150px;
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.contact{
+    height: fit-content;
 }
 
 .services .items {
@@ -116,13 +120,17 @@ header .navigation-items ul li:hover {
 }
 
 
-.about .about-items {
+.about .about-items, .testimonials .items {
     display: flex;
     justify-content: space-evenly;
     padding: 200px 0 0 0;   
 }
 
-.about .about-items .item {
+.testimonials .items {
+    padding: 100px 0 0 0;
+}
+
+.about .about-items .item, .testimonials .items .item {
     margin: 0 50px;
     width: 200px;
     height: fit-content;
@@ -138,4 +146,24 @@ header .navigation-items ul li:hover {
 
 .about .about-items .item.chef {
     transform: translateY(-100px);
+}
+
+.testimonials .items .item {
+    align-items: flex-start;
+    box-shadow: 0 0 0 var(--text-secondary);
+}
+
+.contact .items {
+    display: flex;
+    align-items: center;
+}
+
+.contact .items .item {
+    margin: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.contact .items i {
+    font-size: 1.4em;
 }
