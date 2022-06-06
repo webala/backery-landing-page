@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+:root {
+    --background-primary: #1C0A00;
+    --background-secondary: #361500;
+    --text-primary: #CC9544;
+    --text-secondary: #603601;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +16,26 @@
 }
 
 body {
-    --background-primary: #1C0A00;
-    --background-secondary: #361500;
-    --text-primary: #CC9544;
-    --text-secondary: #603601;
-
     background: var(--background-primary);
     color: var(--text-primary);
 }
+
+::-webkit-scrollbar {
+    width: 11px;
+    background: var(--text-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: var(--background-secondary);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--background-primary);
+}
+
+
 
 header {
     display: flex;
@@ -38,7 +58,6 @@ header .title .logo {
 header .navigation-items {
     display: flex;
     align-items: center;
-    font-weight: 600;
     font-size: 1.2em;
 }
 header .navigation-items ul {
@@ -61,6 +80,10 @@ header .navigation-items ul li:hover {
     color: var(--text-primary);
 }
 
+header .navigation-items ul li:hover a {
+    color: var(--text-secondary);
+}
+
 .landing {
     display: flex;
     align-items: center;
@@ -69,12 +92,12 @@ header .navigation-items ul li:hover {
 }
 
 .landing .bread-img {
-    border-radius: 16px;
+    border-radius: 20px;
     height: 400px;
     margin: 50px;
 }
 
-.services, .about, .testimonials, .contact {
+.services, .about, .testimonials, .contact, .menu {
     margin: 0 150px 0 150px;
     height: 80vh;
     display: flex;
@@ -166,4 +189,15 @@ header .navigation-items ul li:hover {
 
 .contact .items i {
     font-size: 1.4em;
+}
+
+.menu {
+    width: 900px;
+}
+
+.menu .items .item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    height: 10px;
 }
