@@ -74,13 +74,17 @@ header .navigation-items ul li:hover {
     margin: 50px;
 }
 
-.services, .about {
-    margin: 0 150px;
+.services, .about, .testimonials {
+    margin: 0 150px 0 150px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .services .items {
     display: flex;
-    padding: 100px 0;
+    padding: 100px 0 0 0;
     justify-content: space-evenly;
 }
 
@@ -109,4 +113,29 @@ header .navigation-items ul li:hover {
 .services .items .cake {
     height: 200px;
     border-radius: 50%;
+}
+
+
+.about .about-items {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 200px 0 0 0;   
+}
+
+.about .about-items .item {
+    margin: 0 50px;
+    width: 200px;
+    height: fit-content;
+    background: var(--background-secondary);
+    padding: 5px;
+    border-radius: 16px;
+    box-shadow: -10px -10px 5px var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.about .about-items .item.chef {
+    transform: translateY(-100px);
 }
