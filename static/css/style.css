@@ -84,6 +84,14 @@ header .navigation-items ul li:hover a {
     color: var(--text-secondary);
 }
 
+header .menu-btn {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    font-size: 1.2em;
+    visibility: hidden;
+}
+
 .landing {
     display: flex;
     align-items: center;
@@ -153,6 +161,10 @@ header .navigation-items ul li:hover a {
     padding: 100px 0 0 0;
 }
 
+.about {
+    transition: .3s ease;
+}
+
 .about .about-items .item, .testimonials .items .item {
     margin: 0 50px;
     width: 200px;
@@ -179,6 +191,7 @@ header .navigation-items ul li:hover a {
 .contact .items {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .contact .items .item {
@@ -191,6 +204,10 @@ header .navigation-items ul li:hover a {
     font-size: 1.4em;
 }
 
+.contact .items a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
 .menu {
     width: 900px;
 }
@@ -200,4 +217,173 @@ header .navigation-items ul li:hover a {
     justify-content: space-between;
     margin: 0;
     height: 10px;
+}
+
+header .collapsible-nav {
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    backdrop-filter: blur(20px);
+    z-index: 2;
+    border-radius: 16px;
+    visibility: hidden;
+    height: fit-content;
+    transform: translateX(200px);
+    opacity: 0.5;
+    transition: .5s ease;
+}
+
+header .collapsible-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+header .collapsible-nav ul li {
+    margin: 20px 0;
+    padding: 0 5px;
+    transition: .3s ease;
+}
+
+
+header .collapsible-nav ul li:hover {
+    font-size: 1.3em;
+}
+
+.collapsible-nav a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.close-nav-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 1400px) {
+    header {
+        padding: 50px 100px;
+    }
+
+    .landing .bread-img {
+        height: 300px;
+    }
+    .testimonials .items .item {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        padding: 50px 50px;
+    }
+
+    header .navigation-items ul li {
+        margin: 0 10px;
+    }
+
+    .landing {
+        padding: 0 70px;
+    }
+    
+    .landing .bread-img {
+    height: 250px;
+    }
+
+    .services, .about, .testimonials, .contact, .menu {
+        margin: 0 70px 0 70px;
+    }
+
+    .menu {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header .navigation-items {
+        visibility: hidden;
+    }
+    
+    .services, .about, .testimonials, .contact, .menu {
+    margin: 0 10px 0 10px;
+}
+
+    header .menu-btn {
+        visibility: visible;
+    }
+
+    header .collapsible-nav.show {
+        visibility: visible; 
+        transform: translateX(0);
+        opacity: 1;  
+    }
+
+    header .title .logo {
+        height: 100px;
+        width: 100px;
+    }
+
+    header .title h1 {
+        font-size: 1.2em;
+    }
+
+    .landing {
+        flex-direction: column;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .landing .bread-img {
+        height: 170px;
+    }
+
+    .services .items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services .items .cake {
+        height: 150px;
+    }
+
+    .menu {
+        width: 350px;
+        margin-bottom: 70px;
+    }
+
+    .about .about-items {
+        flex-direction: column;
+        padding: 50px 0 50px 0;
+        align-items: center;
+    }
+
+    .about .about-items .item {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .about .about-items .item.chef {
+        transform: translateY(0);
+    }
+
+    .testimonials {
+        margin-top: 110px;
+    }
+
+    .testimonials .items {
+        padding: 25px 0 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonials .items .item {
+        margin: 20px 20px;
+    }
+
+    .contact .items .item {
+        margin: 50px 20px
+    }
 }
