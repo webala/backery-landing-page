@@ -223,7 +223,7 @@ header .collapsible-nav {
     position: fixed;
     top: 100px;
     right: 50px;
-    backdrop-filter: blur(20px);
+    background: var(--text-secondary);
     z-index: 2;
     border-radius: 16px;
     visibility: hidden;
@@ -231,6 +231,7 @@ header .collapsible-nav {
     transform: translateX(200px);
     opacity: 0.5;
     transition: .5s ease;
+
 }
 
 header .collapsible-nav ul {
